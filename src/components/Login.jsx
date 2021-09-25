@@ -1,5 +1,9 @@
 import React from 'react';
 
+import "firebase/app";
+import { auth } from '../functions/firebase';
+import firebase from "firebase/compat/app";
+
 
 import '../styles/main.scss';
 
@@ -9,7 +13,7 @@ const Login = () => {
            <div className="about"></div>
            <div className="card-container">
                 <div className="card-body">
-                    <form className="login">
+                    <div className="login">
                         <h1 className="login-heading">Login</h1>
                         <div className="email">
                             <div className="login-logo"><span class="material-icons">account_circle</span></div>
@@ -33,9 +37,10 @@ const Login = () => {
                         <div className="socialAuth">
                             <div className="gmail">
                                 <button onClick={
-                                    // handle social auth logic
-                                    ()=>{}
-                                }>Gmail</button>
+                                    () => auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider())
+
+                                }
+                                >Gmail</button>
                             </div>
                             <div className="github">
                                 <button onClick={
@@ -44,7 +49,7 @@ const Login = () => {
                                 }>GitHub</button>
                             </div>
                         </div>
-                    </form>
+                    </div>
                     <div className="signup">
                         <div className="heading">
                             <h1 onClick={

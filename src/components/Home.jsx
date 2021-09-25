@@ -4,6 +4,9 @@ import { Redirect, useHistory } from 'react-router';
 
 import {getUser, resetUserSession} from '../utils/authService';
 
+import PostForm from './feeds/post_form';
+import DisplayPost from './feeds/display_post';
+
 const Home = (props) => {
     const history = useHistory();
     const handleLogout = async () => {
@@ -30,6 +33,14 @@ const Home = (props) => {
                 <div onClick={handleLogout} className="logout-tab">
                     Logout
                 </div>
+            </div>
+
+            <div>
+                <PostForm />
+
+                <hr/>
+
+                <DisplayPost />
             </div>
         </div>
     )

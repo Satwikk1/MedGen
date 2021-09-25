@@ -1,28 +1,21 @@
 import React, { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
-import { auth } from '../functions/firebase';
+import { getAuth } from 'firebase/auth';
+import { Redirect, useHistory } from 'react-router';
 
-import { useAuth } from '../functions/contexts/AuthContext';
+import {getUser, resetUserSession} from '../utils/authService';
 
-const Home = () => {
+const Home = (props) => {
     const history = useHistory();
-    const { user } = useAuth();
-
-    console.log(user);
-
     const handleLogout = async () => {
-        await auth.signOut();
-
-        history.push('/');
+        const auth = getAuth();
+        await auth.signOut().then(()=>{
+            resetUserSession();
+            history.push('/');
+        }).catch(err=>{
+            console.log(err);
+        });
     }
 
-    // useEffect(() => {
-    //     if(!user) {
-    //         history.push('/');
-
-    //         return;
-    //     }
-    // }, [user, history])
 
 
     return (

@@ -1,13 +1,42 @@
 import React from 'react';
+import { initializeApp } from 'firebase/app';
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
-import "firebase/app";
-import { auth } from '../functions/firebase';
-import firebase from "firebase/compat/app";
-
-
+import { setUserSession } from '../utils/authService';
 import '../styles/main.scss';
+import { useHistory } from 'react-router';
 
+function SignIn(history){
+    const firebaseConfig = {
+        apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+        authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+        projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+        storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+        messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+        appId: process.env.REACT_APP_FIREBASE_APP_ID
+    };
+    const app = initializeApp(firebaseConfig);
+
+    const auth = getAuth();
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+    .then((result) => {
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        const user = result.user;
+        setUserSession(user.auth.currentUser);
+        history.push('/home');
+    }).catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        const email = error.email;
+        const credential = GoogleAuthProvider.credentialFromError(error);
+    });
+}
 const Login = () => {
+
+    const history = useHistory();
+
     return (
        <div className="auth-container">
            <div className="about"></div>
@@ -37,8 +66,13 @@ const Login = () => {
                         <div className="socialAuth">
                             <div className="gmail">
                                 <button onClick={
-                                    () => auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider())
+                                    () => {
+                                        // auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider()).then(res=>{
+                                        //     console.log(res);
+                                        // });
 
+                                        SignIn(history);
+                                    }
                                 }
                                 >Gmail</button>
                             </div>

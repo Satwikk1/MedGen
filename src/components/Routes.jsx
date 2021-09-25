@@ -1,16 +1,22 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
+import { AuthProvider } from "../functions/contexts/AuthContext";
+
 import {Default} from './Default';
 import { Login } from './Login';
+import { Home } from './Home';
 
 const Routes = () => {
     return (
         <BrowserRouter>
-            <Switch>
-                <Route exact path="/auth" component={Login} />
-                <Route component={Default} />
-            </Switch>
+            <AuthProvider>
+                <Switch>
+                    <Route exact path="/" component={Login} />
+                    <Route exact path="/home" component={Home} />
+                    <Route component={Default} />
+                </Switch>
+            </AuthProvider>
         </BrowserRouter>
     )
 }

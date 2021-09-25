@@ -1,10 +1,141 @@
+@import './constants.scss';
+
 /*##### auth #####*/
 .auth-container{
     width: 100%;
     height: 100vh;
+    display: flex;
     background-color: rgb(145, 145, 145);
-}
 
+    .about{
+        width: 50%;
+        height: 100vh;
+    }
+    .card-container{
+        width: 50%;
+        height: 100vh;
+    }
+    .card-body{
+        width: 55%;
+        height: 70%;
+        margin: auto;
+        overflow: hidden;
+        margin-top: 15%;
+        border-radius: 25px;
+        background-color: #006996;
+    }
+    .login{
+        width: 100%;
+        height: 75%;
+    }
+    .signup{
+        width: 100%;
+        height: 15%;
+        background-color: white;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        .heading{
+            width: fit-content;
+            margin: auto;
+            h1{
+                color: #006996;
+                width: fit-content;
+                font-size: 1.3rem;
+                margin: auto;
+                padding-top: 30%;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .login{
+        width: fit-content;
+        margin: auto;
+
+        .login-heading{
+            color: white;
+            width: fit-content;
+            margin: 20% auto 12% auto;
+            font-size: 2.5rem;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .email{
+            display: flex;
+            .material-icons{
+                font-size: 2.5rem;
+            }
+        }
+        input{
+            font-family: 'Source Sans Pro', sans-serif;
+            height: 25px;
+            padding: 7px;
+            padding-left: 10px;
+            border-radius: 7px;
+            border: none;
+            font-size: 1.1rem;
+            outline: none;
+            width: 200px;
+            margin: 13px 10px;
+        }
+        .submit{
+            width: fit-content;
+            margin-left: auto;
+            margin-right: 10px;
+            button{
+                color: white;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                border: 1px solid white;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-size: 1.3rem;
+                padding: 3px 12px;
+                background-color:#00699600;
+                transition: 0.5s;
+                &:hover{
+                    background-color: white;
+                    color: #006996;
+                    cursor: pointer;
+                }
+            }
+        }
+        .divider{
+            display: flex;
+            margin-top: 5px;
+            .hr{
+                height: 0px;
+                width: 30%;
+                margin: auto;
+                border-bottom: 1px solid white;
+            }
+            h2{
+                color: white;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-weight: 100;
+                font-size: 15px;
+            }
+        }
+        .socialAuth{
+            display: flex;
+            width: fit-content;
+            margin: 30px auto;
+
+        }
+        .password{
+            display: flex;
+        }
+        .login-logo{
+            margin: auto;
+        }
+    }
+}
+.material-icons{
+    color: white;
+    margin: 0;
+    padding: 0;
+}
 // #####  Default  #####
 .invalid-link-container{
     width: 100%;

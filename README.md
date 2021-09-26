@@ -8,23 +8,23 @@ Welcome to MedGen!!MedGen is a solution for these tough covid times to partner a
 
 MedGen provides you with
 - ## Feeds
-- Feeds is the main part of MedGen you can provide your post with event title and description and update people near you with the current event happening be it vaccination camp or RTPCR-test camps as the feeds and post are only related to Covid or health hence you get covid exclusive. 
+  - Feeds is the main part of MedGen you can provide your post with event title and description and update people near you with the current event happening be it vaccination camp or RTPCR-test camps as the feeds and post are only related to Covid or health hence you get covid exclusive. 
 - ## Quiz
-- Make Quizes in MedGen and check how much is your community is aware about the covid and also can be used to pass information in disguise. Having quizes with your community provides you with an fun activity while also checking if you are updated with the vital information needed to be safe.
+  - Make Quizes in MedGen and check how much is your community is aware about the covid and also can be used to pass information in disguise. Having quizes with your community provides you with an fun activity while also checking if you are updated with the vital information needed to be safe.
 
-- ## Tech Stack
+## Tech Stack
 - React
 - Html/CSS
 - Firebase
 - JavaScript
 
-- ## Team
+## Team
 - Satwik Singh
-- E19CSE
-- @Satwikk1
+  - E19CSE241
+  - @Satwikk1
 - Shreyansh Jain
-- E19CSE225
-- @jshreyansh
+  - E19CSE225
+  - @jshreyansh87
 - Chirag Saxena
-- E19CSE124
-- @ChiragSaxena5437
+  - E19CSE124
+  - @ChiragSaxena5437

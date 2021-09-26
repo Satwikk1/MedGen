@@ -7,6 +7,7 @@ import {PrivateRoute} from '../utils/PrivateRoute';
 import {Default} from './Default';
 import { Login } from './Login';
 import { Home } from './Home';
+import { QuizForm } from './QuizForm';
 
 const Routes = () => {
     return (
@@ -15,6 +16,7 @@ const Routes = () => {
                 <Switch>
                     <PublicRoute exact path="/" component={Login} />
                     <PrivateRoute exact path="/home" component={Home} />
+                    <PublicRoute exact path='/createquiz' component={QuizForm} />
                     <Route component={Default} />
                 </Switch>
             </AuthProvider>

@@ -5,7 +5,7 @@ import { useHistory } from 'react-router';
 import {resetUserSession} from '../utils/authService';
 import '../styles/main.scss';
 
-const Navbar = () => {
+const Navbar = (props) => {
 
     const history = useHistory();
     const handleLogout = async () => {
@@ -40,7 +40,11 @@ const Navbar = () => {
                                 <a href="/profile" className="text-white nav-link">Profile</a>
                             </li>
                             <li>
-                                <a href="/createFeed" className="text-white nav-link">Create Feed</a>
+                                <a onClick={
+                                    ()=>{
+                                        props.setToggler(true);
+                                    }
+                                } className="text-white nav-link">Create Feed</a>
                             </li>
                             {/* <li>
                                 <a href="/createQuiz" className="text-white nav-link">Create Quiz</a>

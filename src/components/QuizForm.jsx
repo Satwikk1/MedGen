@@ -74,7 +74,6 @@ const QuizForm = () => {
                         {tempOptions.map((item, index)=>{
                             return(
                                 <div>
-                                    {console.log(item)}
                                     <p className={item[1]?"text-success lead": null}>{item[0]}</p>
                                 </div>
                             )

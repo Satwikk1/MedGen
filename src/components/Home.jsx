@@ -1,15 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Navbar } from './Navbar';
 import { Posts } from './Posts';
+import { FeedsForm } from './FeedsForm';
 import '../styles/main.scss';
 
 const Home = (props) => {
-
+    const [createFeedToggler, setCreateFeedToggler] = useState(false);
+    const [refreshFeeds, setrefreshFeeds] = useState(false);
     return (
         <div className="main-container">
-            <Navbar />
-            <Posts />
+            <Navbar setToggler={setCreateFeedToggler}/>
+            {
+                createFeedToggler?<FeedsForm setToggler={setCreateFeedToggler} setRefresh={setrefreshFeeds} />:<Posts setRefresh={setrefreshFeeds} refresh={refreshFeeds} />
+            }
         </div>
         
 

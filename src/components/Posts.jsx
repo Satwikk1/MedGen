@@ -6,30 +6,35 @@ import PostForm from './feeds/post_form';
 import DisplayPost from './feeds/display_post';
 import '../styles/main.scss';
 
-const Posts = () => {
+const Posts = (props) => {
     
     const [switcher, setSwitcher] = useState(true);
     const [loading, setLoading] = useState(true);
     const [posts, setPosts] = useState([]);
-  
-    useEffect(() => {
-      const getPostsFromFirebase = [];
-      const fetchPostFromFirebase = db
-        .collection("Posts")
-        .onSnapshot((querySnapshot) => {
-          querySnapshot.forEach((doc) => {
-            getPostsFromFirebase.push({
-              ...doc.data(),
-              key: doc.id,
+
+    function fetch(){
+        const getPostsFromFirebase = [];
+        const fetchPostFromFirebase = db
+            .collection("Posts")
+            .onSnapshot((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                getPostsFromFirebase.push({
+                ...doc.data(),
+                key: doc.id,
+                });
             });
-          });
-          setPosts(getPostsFromFirebase);
-          setLoading(false);
-        });
-  
-      // return cleanup function
-      return () => fetchPostFromFirebase();
-    }, [loading]); // empty dependencies array => useEffect only called once
+            setPosts(getPostsFromFirebase);
+            setLoading(false);
+            props.setRefresh(false);
+            });
+            return () => fetchPostFromFirebase();
+    }
+    if(props.refresh){
+        fetch()
+    }
+    useEffect(() => {
+      fetch();
+    }, []); // empty dependencies array => useEffect only called once
   
     if (loading) {
       return <h1>loading firebase data...</h1>;
@@ -49,7 +54,7 @@ const Posts = () => {
                                 <div className="feed-body">
                                     <div className="user-name">
                                         <span class="material-icons">account_circle</span>
-                                        <p>{item.displayName==='undefined'?item.displayName:"test name"}</p>
+                                        <p>{item.displayName}</p>
                                     </div>
                                     <div className="feed-details">
                                         <div className="feed-heading">

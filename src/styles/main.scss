@@ -387,6 +387,11 @@
     }
     li{
         margin: 0 7px;
+        a{
+            &:hover{
+                cursor: pointer;
+            }
+        }
     }
 }
 
@@ -454,6 +459,72 @@
             font-size: 1.3rem;
             font-weight: 600;
             padding: 12px 0 5px 12px;
+        }
+    }
+}
+
+/* feeds form */
+.feed-form-container{
+    height: 100vh;
+    background-color: white;
+    .form-heading{
+        padding: 15px 30px;
+        padding-top: 40px;
+        textarea{
+            margin: 0;
+            padding: 10px 20px;
+            border: 2px solid #034561;
+            border-radius: 0;
+            font-size: 1.2rem;
+            outline: none;
+            width: 100%;
+        }
+    }
+    .form-content{
+        padding: 15px 30px;
+        textarea{
+            margin: 0;
+            height: 300px;
+            padding: 10px 20px;
+            border: 2px solid #034561;
+            border-radius: 0;
+            font-size: 1.2rem;
+            outline: none;
+            width: 100%;
+        }
+    }
+    .controls{
+        display: flex;
+        padding: 10px 30px;
+        padding-bottom: 40px;
+        .cancle{
+            width: fit-content;
+            margin-left: auto;
+            button{
+                outline: none;
+                border: none;
+                background-color: #808080;
+                padding: 5px 20px;
+                margin-right: 20px;
+            }
+        }
+        .post{
+            width: fit-content;
+            button{
+                border: none;
+                outline: none;
+                color: white;
+                padding: 5px 20px;
+                background-color: #0c5f10;
+            }
+        }
+    }
+    .title-bar{
+        background-color: #034561;
+        color: white;
+        h1{
+            font-size: 1.5rem;
+            padding: 5px 0 5px 25px;
         }
     }
 }

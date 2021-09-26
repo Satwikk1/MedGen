@@ -1,20 +1,29 @@
 @import './constants.scss';
 
+::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+  }
+
 /*##### auth #####*/
 .auth-container{
     width: 100%;
     height: 100vh;
     padding: 0;
     display: flex;
-    background-color: rgb(145, 145, 145);
+    background: url(./login_background.jpg);
+    background-size: cover;
+
 
     .about{
-        width: 50%;
+        width: 25%;
         height: 100vh;
+        justify-content: center;
     }
     .card-container{
         width: 50%;
         height: 100vh;
+        
     }
     .card-body{
         width: 380px;
@@ -24,7 +33,7 @@
         overflow: hidden;
         margin-top: 40px;
         border-radius: 25px;
-        background-color: #006996;
+        background-color: #3097c4;
     }
     .login{
         width: 100%;
@@ -126,7 +135,24 @@
             width: fit-content;
             margin: 30px auto;
 
+            .gmail{
+                margin-right: 5px;
+                background-color: #7e8a94;
+                border-radius: 8px;
+                color: white;
+                height: 30px;
+            }
+            .github{
+                margin-left: 5px;
+                background-color: #7e8a94;
+                border-radius: 8px;
+                color: white;
+                height: 30px;
+            }
         }
+
+        
+
         .password{
             display: flex;
         }
@@ -540,6 +566,7 @@
         background-color: #007eb4;
         border-radius: 25px;
         display: relative;
+        z-index: 1;
         padding: 10px 11px 5px 11px;
         width: fit-content;
         margin-left: -48px;
@@ -560,9 +587,14 @@
         }
     }
     .notes-list{
-        height: 330px;
-        margin-left: 5px;
+        height: 290px;
+        margin-left: 10px;
         overflow: scroll;
+        .single-note{
+            width: 95%;
+            border-radius: 5px;
+            background-color: #fae9c4;
+        }
     }
     .add-form{
         width: 100%;

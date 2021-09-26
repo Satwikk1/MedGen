@@ -3,8 +3,11 @@ import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 import { setUserSession } from '../utils/authService';
-import '../styles/main.scss';
+
 import { useHistory } from 'react-router';
+
+import { GoogleOutlined, GithubFilled } from '@ant-design/icons';
+import '../styles/main.scss';
 
 function SignIn(history){
     const firebaseConfig = {
@@ -64,8 +67,9 @@ const Login = () => {
                             <div className="hr"></div>
                         </div>
                         <div className="socialAuth">
-                            <div className="gmail">
-                                <button onClick={
+                            <div>
+                                <button className="gmail"
+                                 onClick={
                                     () => {
                                         // auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider()).then(res=>{
                                         //     console.log(res);
@@ -74,13 +78,14 @@ const Login = () => {
                                         SignIn(history);
                                     }
                                 }
-                                >Gmail</button>
+                                ><GoogleOutlined /> Gmail</button>
                             </div>
-                            <div className="github">
-                                <button onClick={
+                            <div>
+                                <button className="github"
+                                 onClick={
                                     // handle social auth logic
                                     ()=>{}
-                                }>GitHub</button>
+                                }> <GithubFilled /> GitHub</button>
                             </div>
                         </div>
                     </div>

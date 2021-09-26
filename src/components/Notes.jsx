@@ -54,23 +54,23 @@ const Notes = () => {
 
             <div className="notes-list">
                 {
-                    fetchedNotes.length > 0 ? (
-                        fetchedNotes.map(
-                            (note) => 
-                                <div key={note.key} >
+                    fetchedNotes.map(
+                        (note) => {
+                            return(
+                                <div className="single-note" >
                                     <h3> {note.message} </h3>
-                                    <p> {note.senderName} </p>
+                                    {/* <p> {note.senderName} </p> */}
                                     <hr />
                                 </div>
-                        )
-                    ) : (
-                        <h1>You don't have any notes right now</h1>
+                            )
+                        }
                     )
                 }
             </div>
 
 
             <div className="add-form">
+                <hr />
 
                 <textarea className="notes-notedown-field"
                     placeholder="explore your head"

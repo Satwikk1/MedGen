@@ -561,6 +561,7 @@
     }
     .notes-list{
         height: 330px;
+        margin-left: 5px;
         overflow: scroll;
     }
     .add-form{
@@ -574,6 +575,7 @@
             height: 110px;
             padding: 4px 10px;
             margin-left: 0px;
+            margin-top: 10px;
             border-radius: 15px;
             border: none;
             outline: none;
@@ -583,6 +585,7 @@
             margin-left: auto;
             span{
                 font-size: 2.1rem;
+                cursor: pointer;
             }
         }
     }

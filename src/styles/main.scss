@@ -427,9 +427,31 @@
         background-color: #dbdbdb;
         margin-bottom: 10px;
         border-radius: 7px;
+        padding-bottom: 1px;
+        .feed-details{
+            background-color: white;
+            margin: 5px;
+            border-radius: 5px;
+            p{
+                padding: 0 0 15px 10px;
+                font-size: 1rem;
+            }
+        }
+        .user-name{
+            padding: 10px;
+            display: flex;
+            span{
+                font-size: 2.5rem;
+            }
+            p{
+                margin: auto auto auto 10px;
+                font-size: 18px;
+            }
+        }
         h1{
-            font-size: 1.5rem;
-            padding: 5px 0 5px 10px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 12px 0 5px 12px;
         }
     }
 }

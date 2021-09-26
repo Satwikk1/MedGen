@@ -48,13 +48,16 @@ const Posts = () => {
                             return(
                                 <div className="feed-body">
                                     <div className="user-name">
-                                        
+                                        <span class="material-icons">account_circle</span>
+                                        <p>{item.displayName==='undefined'?item.displayName:"test name"}</p>
                                     </div>
-                                    <div className="feed-heading">
-                                        <h1>{item.Title}</h1>
-                                    </div>
-                                    <div className="feed-message">
-                                        <p className="lead">{item.message}</p>
+                                    <div className="feed-details">
+                                        <div className="feed-heading">
+                                            <h1>{item.Title}</h1>
+                                        </div>
+                                        <div className="feed-message">
+                                            <p className="lead">{item.message}</p>
+                                        </div>
                                     </div>
                                 </div>
                             )

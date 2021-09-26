@@ -4,6 +4,7 @@ import { Navbar } from './Navbar';
 import { Posts } from './Posts';
 import { FeedsForm } from './FeedsForm';
 import { Notes } from './Notes';
+import { AttemptQuiz } from './AttemptQuiz';
 import '../styles/main.scss';
 
 import QuizForm from './quiz/QuizForm';
@@ -12,12 +13,14 @@ import DisplayQuiz from './quiz/DisplayQuiz';
 const Home = (props) => {
     const [createFeedToggler, setCreateFeedToggler] = useState(false);
     const [refreshFeeds, setrefreshFeeds] = useState(false);
+    const [selectedQuiz, setselectedQuiz] = useState(null);
+    const [attempting, setAttempting] = useState(false);
     return (
         <div className="main-container">
             <Navbar setToggler={setCreateFeedToggler}/>
             <div className="main-body">
                 {
-                    createFeedToggler?<FeedsForm setToggler={setCreateFeedToggler} setRefresh={setrefreshFeeds} />:<Posts setRefresh={setrefreshFeeds} refresh={refreshFeeds} />
+                    createFeedToggler?<FeedsForm setToggler={setCreateFeedToggler} setRefresh={setrefreshFeeds} />:<Posts setSelectedQuiz={setselectedQuiz} setAttempting={setAttempting} setRefresh={setrefreshFeeds} refresh={refreshFeeds} />
                 }
                 <Notes />
             </div>

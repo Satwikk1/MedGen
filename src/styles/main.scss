@@ -444,6 +444,34 @@
                 font-size: 1rem;
             }
         }
+        .quiz-footer{
+            display: flex;
+            .ques-no{
+                width: fit-content;
+                height: fit-content;
+                margin-right: auto;
+                p{
+                    padding: 0 10px;
+                    margin: auto;
+                }
+            }
+            .difficulty{
+                
+            }
+            .attempt-btn{
+                width: fit-content;
+                margin-left: auto;
+                button{
+                    border: none;
+                    outline: none;
+                    margin-bottom: 10px;
+                    margin-right: 10px;
+                    color: white;
+                    background-color: #037c21;
+                    padding: 5px 15px;
+                }
+            }
+        }
         .user-name{
             padding: 10px;
             display: flex;
@@ -533,7 +561,7 @@
 .notes-main-container{
     width: 350px;
     // overflow: scroll;
-    height: 100vh;
+    height: 100%;
     transition: 2s ease-in-out;
     background-color: #006996;
     .toggler{

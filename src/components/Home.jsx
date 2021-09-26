@@ -6,6 +6,7 @@ import { FeedsForm } from './FeedsForm';
 import '../styles/main.scss';
 
 import QuizForm from './quiz/QuizForm';
+import DisplayQuiz from './quiz/DisplayQuiz';
 
 const Home = (props) => {
     const [createFeedToggler, setCreateFeedToggler] = useState(false);

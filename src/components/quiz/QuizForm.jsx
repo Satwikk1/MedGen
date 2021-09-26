@@ -24,6 +24,8 @@ const QuizForm = () => {
         obj.title = title;
         obj.disp = disp;
         obj.difficulty = difficulty;
+        obj.senderName = user.displayName;
+        obj.senderUid = user.uid;
         let questionArr = []
         for(let i=0; i<questionSet.length; i++){
             let questions = {}

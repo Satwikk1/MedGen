@@ -4,6 +4,7 @@
 .auth-container{
     width: 100%;
     height: 100vh;
+    padding: 0;
     display: flex;
     background-color: rgb(145, 145, 145);
 
@@ -16,11 +17,12 @@
         height: 100vh;
     }
     .card-body{
-        width: 55%;
-        height: 70%;
+        width: 380px;
+        height: 550px;
         margin: auto;
+        padding: 0;
         overflow: hidden;
-        margin-top: 15%;
+        margin-top: 40px;
         border-radius: 25px;
         background-color: #006996;
     }
@@ -30,7 +32,9 @@
     }
     .signup{
         width: 100%;
-        height: 15%;
+        height: 16%;
+        margin: 0;
+        padding: 0;
         background-color: white;
         border-top-left-radius: 50%;
         border-top-right-radius: 50%;
@@ -70,7 +74,7 @@
         input{
             font-family: 'Source Sans Pro', sans-serif;
             height: 25px;
-            padding: 7px;
+            padding: 17px 15px;
             padding-left: 10px;
             border-radius: 7px;
             border: none;
@@ -335,4 +339,102 @@
             }
         }
     }
+}
+
+
+/*########## Navbar ##########*/
+.home-container{
+    .navbar-brand{
+        font-weight: 800;
+        font-size: 2rem;
+        color:rgb(92, 92, 92)
+    }
+    .navbar{
+        background-color: #034561;
+    }
+    .brand-bold{
+        color: #ffffff;
+    }
+    .search-bar{
+        display: flex;
+        input{
+            border-radius: 0;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            border: none;
+            outline: none;
+        }
+        .search-btn{
+            span{
+                color: #034561;
+                padding: 7px 10px 0 0;
+            }
+            width: fit-content;
+            padding: 0;
+            background-color: white;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+    }
+    .profile-logo{
+        width: fit-content;
+        height: fit-content;
+        margin: auto;
+        span{
+            margin: auto;
+            font-size: 2.5rem;
+        }
+    }
+    li{
+        margin: 0 7px;
+    }
+}
+
+/*########## Posts ##########*/
+.posts-container{
+    background-color: #ffffff;
+    .switcher{
+        display: flex;
+        padding: 20px 0;
+        .feeds-btn{
+            background-color: #808080;
+            margin-left: auto;
+            color: white;
+            border-radius: 25px;
+            transition: 1s ease-in-out;
+            padding: 5px 25px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .quiz-btn{
+            background-color: #808080;
+            color: white;
+            border-radius: 25px;
+            padding: 5px 25px;
+            transition: 1s ease-in-out;
+            margin-right: auto;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .selected-btn{
+            padding: 5px 50px;
+            background-color: #034561;
+        }
+    }
+    .feed-body{
+        background-color: #dbdbdb;
+        margin-bottom: 10px;
+        border-radius: 7px;
+        h1{
+            font-size: 1.5rem;
+            padding: 5px 0 5px 10px;
+        }
+    }
+}
+
+/* home */
+.main-container{
+    background-color: rgb(180, 180, 180);
 }

@@ -5,6 +5,8 @@ import { Posts } from './Posts';
 import { FeedsForm } from './FeedsForm';
 import '../styles/main.scss';
 
+import QuizForm from './quiz/QuizForm';
+
 const Home = (props) => {
     const [createFeedToggler, setCreateFeedToggler] = useState(false);
     const [refreshFeeds, setrefreshFeeds] = useState(false);
@@ -14,7 +16,10 @@ const Home = (props) => {
             {
                 createFeedToggler?<FeedsForm setToggler={setCreateFeedToggler} setRefresh={setrefreshFeeds} />:<Posts setRefresh={setrefreshFeeds} refresh={refreshFeeds} />
             }
+
         </div>
+
+        
         
 
 

@@ -4,10 +4,10 @@ import {getUser, resetUserSession} from '../../utils/authService';
 import { db } from '../../functions/database';
 
 import "../../styles/main.scss";
+// import { useHistory } from 'react-router';
 
-const QuizForm = () => {
+const QuizForm = (props) => {
     const user = getUser();
-
     const [questionSet, setQuestionSet] = useState([])
     const [tempOptions, setTempOptions] = useState([]);
     const [hoption, setHoption] = useState('');
@@ -147,7 +147,8 @@ const QuizForm = () => {
                                 setDisp(null);
                                 setDifficulty(1);
                                 setQuestionSet([]);
-
+                                props.setQuizToggler(false);
+                                props.setRefreshQuiz(true);
                             }
                             
                         }>Publish</button>

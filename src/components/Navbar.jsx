@@ -37,7 +37,9 @@ const Navbar = (props) => {
                         </div>
                         <ul className="navbar-nav mb-2 mb-lg-0">
                             <li>
-                                <a href="/profile" className="text-white nav-link">Profile</a>
+                                <a onClick={()=>{
+                                    props.setQuizToggler(true);
+                                }} className="text-white nav-link">Create Quiz</a>
                             </li>
                             <li>
                                 <a onClick={

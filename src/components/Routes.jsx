@@ -16,7 +16,7 @@ const Routes = () => {
                 <Switch>
                     <PublicRoute exact path="/" component={Login} />
                     <PrivateRoute exact path="/home" component={Home} />
-                    <PublicRoute exact path='/createquiz' component={QuizForm} />
+                    <PrivateRoute exact path='/createquiz' component={QuizForm} />
                     <Route component={Default} />
                 </Switch>
             </AuthProvider>

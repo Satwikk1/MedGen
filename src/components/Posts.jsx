@@ -26,6 +26,7 @@ const Posts = (props) => {
                 });
             });
             setQuiz(getQuizFromFirebase);
+            props.setRefreshQuiz(false);
             // setLoadingQuiz(false);
             });
     
@@ -52,6 +53,9 @@ const Posts = (props) => {
     }
     if(props.refresh){
         fetch()
+    }
+    if(props.refreshQuiz){
+        fetchQuiz();
     }
     useEffect(() => {
       fetch();
@@ -150,7 +154,7 @@ const Posts = (props) => {
                                                     :null}
                                                 </div>
                                                 <div className="attempt-btn">
-                                                    <button onClick={()=>{props.setselectedQuiz(item.questions); props.setAttempting(true)}}>Attempt</button>
+                                                    <button onClick={()=>{props.setSelectedQuiz(item); props.setAttempting(true)}}>Attempt</button>
                                                 </div>
                                             </div>
                                         </div>

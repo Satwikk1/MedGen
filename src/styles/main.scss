@@ -150,7 +150,8 @@
 /*########## QuizForm ##########*/
 .quiz-form-body{
     width: 55%;
-    height: 100%;
+    height: 100vh;
+    overflow: scroll;
     margin: auto;
     font-family: 'Source Sans Pro', sans-serif;
     background-color: #d4d4d4;
@@ -456,7 +457,7 @@
                 }
             }
             .difficulty{
-                
+
             }
             .attempt-btn{
                 width: fit-content;
@@ -622,10 +623,94 @@
     width: 0px;
 }
 
+/* AttemptQuiz */
+.attempt-quiz-container{
+    overflow: scroll;
+    .quiz-header{
+        background-color: #fff;
+        margin: 20px 0 10px 0;
+        padding: 20px 40px;
+        .heading{
+            width: fit-content;
+            margin: auto;
+            h1{
+                font-size: 2rem;
+            }
+        }
+        .disp{
+            padding: 0px 10px;
+            p{
+                font-size: 1.1rem;
+            }
+        }
+    }
+    .question-container{
+        background-color: white;
+        padding: 20px 0px;
+        .question-text{
+            padding: 10px 20px;
+            h1{
+                font-size: 1.5rem;
+            }
+        }
+        .options{
+            .option{
+                padding: 10px 0px;
+            }
+            padding: 0 20px;
+            p{
+                padding: 0;
+                margin: 0;
+            }
+            input{
+                zoom: 1.5;
+                margin: auto 10px;
+            }
+        }
+    }
+    .controls{
+        background-color: white;
+        .submit{
+            width: fit-content;
+            margin-left: auto;
+            padding: 20px;
+            button{
+                border: none;
+                outline: none;
+                padding: 5px 20px;
+                color: white;
+                background-color: rgb(18, 104, 1);
+            }
+        }
+    }
+    .score{
+        background-color: white;
+        padding: 20px;
+        margin-top: 20px;
+        p{
+            font-weight: 500;
+        }
+    }
+    .good-perform{
+        background-color: green;
+    }
+    .bad-perform{
+        background-color: red;
+    }
+    .go-back{
+        button{
+            border: none;
+            outline: none;
+            padding: 3px 10px;
+        }
+    }
+}
+
 /* home */
 .main-container{
     background-color: rgb(180, 180, 180);
     height: 100vh;
+    overflow: scroll;
     .main-body{
         display: flex;
     }

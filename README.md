@@ -19,6 +19,20 @@ MedGen provides you with
 - Html/CSS
 - Firebase
 - JavaScript
+## ScreenShots
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/64087682/134818926-20097b50-5f35-4c93-a39b-9637005886f3.jpeg" />
+  <img src="https://user-images.githubusercontent.com/64087682/134818916-d66dd14a-a341-4c5e-824f-533a31a7b0d3.jpeg" />
+  <img src="https://user-images.githubusercontent.com/64087682/134818919-bf8c3833-958a-4769-85d6-9873560fd594.jpeg" />
+  <img src="https://user-images.githubusercontent.com/64087682/134818920-b35c84ab-3305-4fdf-9537-5108ef08a61a.jpeg" />
+  <img src="https://user-images.githubusercontent.com/64087682/134818924-4f8415f1-0503-4414-960d-7e6b3432660d.jpeg" />
+  <img src="https://user-images.githubusercontent.com/64087682/134818925-5a80212f-2ddf-4e6f-a5f9-637b7424234a.jpeg" />
+  
+  <img src="https://user-images.githubusercontent.com/64087682/134818935-23457ba1-4c34-4966-9096-e199fc08f4cc.jpeg" />
+  <img src="https://user-images.githubusercontent.com/64087682/134818937-9992777c-6ade-400c-a95f-f459a7bb2e42.jpeg" />
+  
+  
+</p>
 
 ## Team
 - Satwik Singh

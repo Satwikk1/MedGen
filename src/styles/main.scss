@@ -529,8 +529,73 @@
     }
 }
 
+/* Notes */
+.notes-main-container{
+    width: 350px;
+    // overflow: scroll;
+    height: 100vh;
+    transition: 2s ease-in-out;
+    background-color: #006996;
+    .toggler{
+        background-color: #007eb4;
+        border-radius: 25px;
+        display: relative;
+        padding: 10px 11px 5px 11px;
+        width: fit-content;
+        margin-left: -48px;
+        margin-top: 10px;
+        &:hover{
+            cursor: pointer;
+        }
+        span{
+            font-size: 2.2rem;
+        }
+    }
+    .notes-heading{
+        width: fit-content;
+        margin: auto;
+        h1{
+            color: white;
+            margin: auto;
+        }
+    }
+    .notes-list{
+        height: 330px;
+        overflow: scroll;
+    }
+    .add-form{
+        width: 100%;
+        padding: 0 15px;
+        margin: auto;
+        transition: 2s ease-in-out;
+        .notes-notedown-field{
+            width: 100%;
+            margin: auto;
+            height: 110px;
+            padding: 4px 10px;
+            margin-left: 0px;
+            border-radius: 15px;
+            border: none;
+            outline: none;
+        }
+        .add-btn{
+            width: fit-content;
+            margin-left: auto;
+            span{
+                font-size: 2.1rem;
+            }
+        }
+    }
+}
+.collasped{
+    width: 0px;
+}
+
 /* home */
 .main-container{
     background-color: rgb(180, 180, 180);
     height: 100vh;
+    .main-body{
+        display: flex;
+    }
 }

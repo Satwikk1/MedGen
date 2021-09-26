@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Navbar } from './Navbar';
 import { Posts } from './Posts';
 import { FeedsForm } from './FeedsForm';
+import { Notes } from './Notes';
 import '../styles/main.scss';
 
 const Home = (props) => {
@@ -11,9 +12,12 @@ const Home = (props) => {
     return (
         <div className="main-container">
             <Navbar setToggler={setCreateFeedToggler}/>
-            {
-                createFeedToggler?<FeedsForm setToggler={setCreateFeedToggler} setRefresh={setrefreshFeeds} />:<Posts setRefresh={setrefreshFeeds} refresh={refreshFeeds} />
-            }
+            <div className="main-body">
+                {
+                    createFeedToggler?<FeedsForm setToggler={setCreateFeedToggler} setRefresh={setrefreshFeeds} />:<Posts setRefresh={setrefreshFeeds} refresh={refreshFeeds} />
+                }
+                <Notes />
+            </div>
         </div>
         
 
